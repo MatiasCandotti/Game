@@ -3,5 +3,11 @@ export const myAssets = {
     BackGround:     "./600square.png",
     Button:         "./100square.png",
     Character:      "./400character.png",
-    Hat:            "./550300hat.png"
+    Hat:            "./550300hat.png",
+    
+    Mage:           "./Mage/380440mage.png",
+    MageWink:       "./Mage/380440magewink.png",
+    MageTalk:       "./Mage/380440magetalk.png",
+    MageWinkTalk:   "./Mage/380440magewinktalk.png",
+    MageHat:        "./Mage/400220magehat.png"
 };
