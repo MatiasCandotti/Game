@@ -1,5 +1,6 @@
-import { Application, Assets, Container, Sprite } from 'pixi.js'
+import { Application, Assets} from 'pixi.js'
 import { myAssets } from './assetBundle'
+import { Scene } from './Scene';
 
 const app = new Application({
 	view: document.getElementById("pixi-canvas") as HTMLCanvasElement,
@@ -33,22 +34,7 @@ window.dispatchEvent(new Event("resize"));
 
 Assets.addBundle("myAssets", myAssets);
 Assets.loadBundle("myAssets").then(()=>{
-	const clampy: Sprite = Sprite.from("Clampy");
-	clampy.anchor.set(0.5);
-
-	const myBG: Sprite = Sprite.from("BackGround");
-	myBG.anchor.set(0.5);
-
-	const button: Sprite = Sprite.from("Button");
-	button.anchor.set(0.5);
-	button.position.set(0,200);
-
-	const myScreen: Container = new Container;
-	myScreen.pivot.set(-400,-300);
-
-	myScreen.addChild(myBG);
-	myScreen.addChild(clampy);
-	myScreen.addChild(button);
-	
-	app.stage.addChild(myScreen);
+	const myScene: Scene = new Scene;
+	app.stage.addChild(myScene);
+	myScene.pivot.set(-100,-600);
 });
