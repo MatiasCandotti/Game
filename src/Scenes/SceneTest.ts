@@ -1,6 +1,4 @@
 import { AnimatedSprite, Container, Graphics, Sprite, Text, Texture } from "pixi.js";
-import { MageSprites } from "./MageSprites";
-import { CharacterWithHat } from "./CharacterWithHat";
 
 export class Scene extends Container {
     constructor()
@@ -21,14 +19,6 @@ export class Scene extends Container {
         button.anchor.set(0.5);
         button.position.set(300,-100);
         this.addChild(button);
-
-        const charWithHat: CharacterWithHat = new CharacterWithHat;
-        charWithHat.position.set(150,-500);
-        //this.addChild(charWithHat);
-
-        const mageWithHat: MageSprites = new MageSprites;
-        mageWithHat.position.set(150,-440);
-        //this.addChild(mageWithHat);
 
         const animated: AnimatedSprite = new AnimatedSprite(
                 [   //sprites
