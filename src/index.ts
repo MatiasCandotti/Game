@@ -1,14 +1,17 @@
-import { Application, Assets} from 'pixi.js'
-import { TestScene } from './ClasesTesting/TestScene'
-import { myAssets } from './assetBundle'
+import { Application, Assets} from 'pixi.js';
+import { myAssets } from './assetBundle';
+import { TestScene } from './ClasesTesting/TestScene';
+
+const WIDTH = 200;
+const HEIGHT = 150;
 
 const app = new Application({
 	view: document.getElementById("pixi-canvas") as HTMLCanvasElement,
 	resolution: window.devicePixelRatio || 1,
 	autoDensity: true,
 	backgroundColor: 0x6495ed,
-	width: 800,
-	height: 600,
+	width: WIDTH,
+	height: HEIGHT,
 	hello: true
 });
 
