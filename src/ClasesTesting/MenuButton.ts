@@ -15,6 +15,7 @@ export class MenuButton extends NineSlicePlane{
                 fontFamily:fontFamily,
             }
         )
+        _buttonText.scale.set(0.2);
         _buttonText.anchor.set(0.5);
         _buttonText.position.set(halfbuttonWidth,buttonHeight/2);
         this.addChild(_buttonText);

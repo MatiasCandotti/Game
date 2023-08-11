@@ -1,9 +1,12 @@
-import { Application, Assets} from 'pixi.js';
+import { Application, Assets, BaseTexture, SCALE_MODES, settings} from 'pixi.js';
 import { myAssets } from './assetBundle';
 import { TestScene } from './ClasesTesting/TestScene';
 
-const WIDTH = 200;
-const HEIGHT = 150;
+const WIDTH = 1080;
+const HEIGHT = 700;
+
+settings.ROUND_PIXELS = true;
+BaseTexture.defaultOptions.scaleMode = SCALE_MODES.NEAREST;
 
 const app = new Application({
 	view: document.getElementById("pixi-canvas") as HTMLCanvasElement,
@@ -38,5 +41,6 @@ window.dispatchEvent(new Event("resize"));
 Assets.addBundle("myAssets", myAssets);
 Assets.loadBundle("myAssets").then(()=>{
 	const myTestScene = new TestScene;
+	myTestScene.position.x = WIDTH/2;
 	app.stage.addChild(myTestScene);
 });

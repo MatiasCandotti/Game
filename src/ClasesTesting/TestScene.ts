@@ -21,8 +21,7 @@ export class TestScene extends Container {
 
         animatedCharacter.anchor.set(0.5);
         animatedCharacter.anchor.y *= 2;
-
-        animatedCharacter.x = 100;
+        
         animatedCharacter.y = 130;
 
         const anchorTracker: Graphics = new Graphics();
@@ -35,14 +34,13 @@ export class TestScene extends Container {
         this.addChild(animatedCharacter);
 
         const myMenu: Container = new Container;
-        myMenu.position.x = 100;
         myMenu.position.y = 25;
 
         const buttonWidth: number = 100;
         const buttonHeight: number = 20;
         const buttonSpacing: number = 2;
 
-        const buttonFontSize: number = 12;
+        const buttonFontSize: number = 50;
         const buttonFont: string = "Arial";
         const buttonColor = 0xFFFFFF;
         
@@ -58,5 +56,7 @@ export class TestScene extends Container {
         myMenu.addChild(quitButton);
 
         this.addChild(myMenu);
+
+        this.scale.set(4);
     }
 }
